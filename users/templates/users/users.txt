@@ -1,0 +1,28 @@
+{"ok":true,"result":[{"update_id":610946291,
+"message":{"message_id":126,"from":{"id":1095393146,"is_bot":false,"first_name":"Dhana C P"},"chat":{"id":1095393146,"first_name":"Dhana C P","type":"private"},"date":1594964807,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}},{"update_id":610946292,
+"message":{"message_id":127,"from":{"id":1095393146,"is_bot":false,"first_name":"Dhana C P","language_code":"en"},"chat":{"id":1095393146,"first_name":"Dhana C P","type":"private"},"date":1594964826,"text":"Hello from Dhana"}},{"update_id":610946293,
+"message":{"message_id":132,"from":{"id":1398212537,"is_bot":false,"first_name":"Prabhakar","last_name":"A","language_code":"en"},"chat":{"id":1398212537,"first_name":"Prabhakar","last_name":"A","type":"private"},"date":1594966727,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}},{"update_id":610946294,
+"message":{"message_id":133,"from":{"id":1398212537,"is_bot":false,"first_name":"Prabhakar","last_name":"A","language_code":"en"},"chat":{"id":1398212537,"first_name":"Prabhakar","last_name":"A","type":"private"},"date":1594966735,"text":"Hey"}},{"update_id":610946295,
+"message":{"message_id":134,"from":{"id":1398212537,"is_bot":false,"first_name":"Prabhakar","last_name":"A","language_code":"en"},"chat":{"id":1398212537,"first_name":"Prabhakar","last_name":"A","type":"private"},"date":1594966774,"text":"Hello"}},{"update_id":610946296,
+"message":{"message_id":135,"from":{"id":1398212537,"is_bot":false,"first_name":"Prabhakar","last_name":"A","language_code":"en"},"chat":{"id":1398212537,"first_name":"Prabhakar","last_name":"A","type":"private"},"date":1594966831,"text":"\"Hello\""}},{"update_id":610946297,
+"message":{"message_id":136,"from":{"id":805220537,"is_bot":false,"first_name":"Catherine","last_name":"Samuel"},"chat":{"id":805220537,"first_name":"Catherine","last_name":"Samuel","type":"private"},"date":1594966885,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}},{"update_id":610946298,
+"message":{"message_id":137,"from":{"id":805220537,"is_bot":false,"first_name":"Catherine","last_name":"Samuel","language_code":"en"},"chat":{"id":805220537,"first_name":"Catherine","last_name":"Samuel","type":"private"},"date":1594966894,"text":"Hello"}}]}
+{"update_id":610946300,
+"message":{"message_id":154,"from":{"id":1367532036,"is_bot":false,"first_name":"Permilet","last_name":"Punitha","language_code":"en"},"chat":{"id":1367532036,"first_name":"Permilet","last_name":"Punitha","type":"private"},"date":1594995684,"text":"Hello"}}]}
+
+
+https://api.telegram.org/bot1216387706:AAEP_jhHbpNvgkDyDgT3p1cKh0Ao41Y2VrU/getUpdates
+
+Wilson
+Ruben
+Annencia 
+Dhana : 1095393146
+Prabhakar : 1398212537
+Catherine : 805220537
+Anjali : 913398865
+Lidwin :
+Sagaya Rani :
+Felix :
+Punitha :1367532036
+
+

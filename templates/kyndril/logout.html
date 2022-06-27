@@ -1,0 +1,33 @@
+{% extends "kyndril/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<html lang="en">
+  <body>
+    <main>
+      <div class="g-max-width-645 text-center g-pt-100 mx-auto g-mb-80">
+       <a href="{% url 'user_login' %}"> <h1 class="mb-0">Login</h1> </a>
+      </div>
+      <!-- Login -->
+      <div class="container g-pb-30">
+        <div class="row justify-content-right align-right">
+          <div class="col-md-9 col-lg-6 text-center g-mb-70">
+            <h2 class="h5 mb-4">Logout Page </h2>
+             <h5 class="h5 mb-4">You have been Logged Out </h5>
+             <p>Do you want to <a href="#">Log In</a> again?</p>
+            <!-- Login Form -->
+             
+            <!-- End Login Form -->
+            <div class="d-flex justify-content-between g-mb-10">
+              <a class="d-block g-mb-10" href="page-register-1.html">Create an account</a>
+              <a class="d-block g-mb-10" href="page-forgot-password-1.html">Forgot Password?</a>
+            </div>
+            <p class="g-font-size-12">Please view our <a class="g-color-text g-text-underline" href="#">Personal Information Collection Statement</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+{% endblock content %}

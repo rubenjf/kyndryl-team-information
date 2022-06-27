@@ -1,0 +1,22 @@
+https://django-storages.readthedocs.io/en/latest/backends/gcloud.html
+
+CREATE a GCP Service Account
+gcloud iam service-accounts create sa-focusweb  --description="sa-focusweb-service-account-for-gcp-IAM" --display-name="sa-focusweb"
+
+LIST
+gcloud iam service-accounts list
+
+
+can create a service account key using the Cloud Console
+
+
+projectViewer:[PROJECT_ID]
+
+[PROJECT_ID]= focusweb-279914
+
+gcloud iam service-accounts keys create ~/key.json --iam-account sa-focusweb@focusweb-279914.iam.gserviceaccount.com
+
+
+storage_client = storage.Client.from_service_account_json('service_account.json')
+
+gcloud auth activate-service-account --key-file "C:\Ruben\Projects\focusweb\keys\focusweb-key.json

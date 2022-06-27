@@ -1,0 +1,6 @@
+https://django-storages.readthedocs.io/en/latest/backends/gcloud.html
+
+CREATE a GCP Service Account
+gcloud iam service-accounts create sa-name \
+    --description="sa-description" \
+    --display-name="sa-display-name"

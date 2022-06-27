@@ -1,0 +1,198 @@
+{% extends "kyndril/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<html lang="en">
+<head>
+  <style>
+    .dummy-width{
+      width:92vw;
+    }
+  </style>
+</head>
+  <body>
+          <!-- Main Sidebar -->
+
+        <!-- End Main Sidebar -->
+      <main class="main-content col-lg-13 col-md-12 col-sm-12 p-0 ">
+          <div class="main-navbar sticky-top bg-white">
+            <!-- Main Navbar -->
+            <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+
+              <div action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
+                <div class="input-group input-group-seamless ml-3">
+                  <div class="d-flex p-2 px-3 bg-white border-top  my-auto">
+                        <ul class="nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'index' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Blog</a>
+                        </li>
+                      </ul>
+                  </div>
+                  
+              </div>
+
+              <nav class="nav">
+                <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
+                  <i class="material-icons">&#xE5D2;</i>
+                </a>
+              </nav>
+            </nav>
+          </div>
+          <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+
+
+          <!-- / .main-navbar -->
+
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0 ">
+                <span class="text-uppercase page-subtitle">Dashboard</span>
+                <h3 class="page-title">User Profile</h3>
+              </div>
+            </div>
+            <!-- End Page Header -->
+            <!-- Default Light Table -->
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card card-small mb-4 pt-3">
+                  <div class="card-header border-bottom text-center">
+                    <div class="mb-3 mx-auto">
+                      <img class="rounded-circle" src="{{ user.profile.image.url }}" alt="User Avatar" width="110"> </div>
+                    <h4 class="mb-0">{{user.profile.title}} {{user.first_name}},{{user.last_name}}</h4>
+                    <span class="text-muted d-block mb-2">{{user.profile.job_title}}</span>
+                    <button type="button" class="mb-2 btn btn-sm btn-pill btn-outline-primary mr-2">
+                      <i class="material-icons mr-1">person_add</i>{{user.profile.user_type}}</button>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-4">
+                      <div class="progress-wrapper">
+                        <strong class="text-muted d-block mb-2">Date of Birth</strong>
+                        <div class="progress progress-sm">
+                          <div class=" bg-primary" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100" style="width: 74%;">
+                            <span class="progress-value">{{user.profile.birth_date}}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-group-item p-4">
+                      <strong class="text-muted d-block mb-2">Skills I Have</strong>
+                      <span>  </span>
+                      <span> {{user.profile.skills_have}} </span>
+                    </li>
+                    <li class="list-group-item p-4">
+                      <strong class="text-muted d-block mb-2">Skills I Like To Have</strong>
+                      <span>  </span>
+                      <span> {{user.profile.skills_like2_have}} </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="col-lg-8">
+              
+
+                <div class="card card-small mb-4">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Basic Details</h6>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-3">
+                      <div class="row">
+                        <div class="col">
+                          <form1>
+
+
+
+                           <div class="form-row">
+                              <div class="form-group col-md-12 dummy-width">
+                                <label for="feDescription">Summary</label>
+                                <text class="form-control" name="feDescription" rows="5">{{user.profile.summary}}</text>
+                              </div>
+                            </div> 
+
+
+
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="feFirstName">Other Name(s)</label>
+                                <span type="text" class="form-control" id="feOthertName" placeholder="Other Name" >{{user.profile.other_names}}</span> </div>
+                              <div class="form-group col-md-6">
+                                <label for="feNickName">Nick Name</label>
+                                <span type="text" class="form-control" id="feNickName" placeholder=" Nick Name" > {{user.profile.nick_name}} </span></div>
+                            </div>
+
+
+
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="feEmailAddress">User Email</label>
+                                <span type="email" class="form-control" id="feEmailAddress" placeholder="Email" > {{user.email}} </span></div>
+                              <div class="form-group col-md-6">
+                                <label for="kyEmailAddress">Company Email</label>
+                                <span type="email" class="form-control" id="kyEmailAddress" placeholder="Email" > {{user.profile.email2}} </span> </div>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="fePhone1">Work Phone</label>
+                                <span type="text" class="form-control" id="fePhone1" placeholder="Email"> {{user.profile.phone1}} </span> </div>
+                              <div class="form-group col-md-6">
+                                <label for="fePhone2">Personal Phone</label>
+                                <span type="text" class="form-control" id="fePhone2" placeholder="Email" > {{user.profile.phone2}} </span> </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                              <label for="feInputAddress">Present Address</label>
+                              <span type="text" class="form-control" id="feInputAddress" >{{perm_addr}} </span> </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="feInputCity">Current Location</label>
+                                <span type="text" class="form-control" id="feInputCity" > {{user.profile.location}} </span> </div>
+                              <div class="form-group col-md-4">
+                                <label for="feInputState">Time Zone</label>
+                                <span type="text" id="feInputState" class="form-control" >{{user.profile.timezone}} </span>
+                              </div>
+                              <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <span type="text" class="form-control" id="inputZip" > {{user.profile.zip_post_code}} </span> </div>
+                            </div>
+
+
+
+
+                            
+                          </form>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End Default Light Table -->
+          </div>
+                        <!-- Top Referrals Component -->
+   
+              <!-- End Top Referrals Component -->
+
+
+          
+        </main>
+            
+</body>    
+  
+</html>
+{% endblock content %}

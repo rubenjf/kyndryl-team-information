@@ -1,0 +1,48 @@
+{% extends "kyndril/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+
+<div id="div-prayer-requests">
+  {% block content %}
+
+  <!-- ##### Breadcrumb Area Start ##### -->
+
+  <!-- ##### Breadcrumb Area End ##### -->
+  <section class="upcoming-events-area section-padding-0-100">
+       <div class="main-navbar">
+            <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
+              <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
+                <div class="d-table m-auto">
+                  <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="{% static 'images/shards-dashboards-logo.svg' %}" alt="Shards Dashboard">
+                  <span class="d-none d-md-inline ml-1">Employee Profile</span>
+                </div>
+              </a>
+              <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
+                <i class="material-icons">&#xE5C4;</i>
+              </a>
+            </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <!-- ##### Contact Form Area Start ##### -->
+          <h4>You have been Logged Out</h4>
+          <div class="border-top pt-3">
+            <small class="text-muted">
+              Do you want to Login Again ?
+              <a  href="{% url 'user_login' %}">Login Again</a>
+            </small>
+          </div>
+          
+          <!-- ##### Contact Form Area End ##### -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
+</div>

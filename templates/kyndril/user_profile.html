@@ -1,0 +1,232 @@
+{% extends "kyndril/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<head>
+<!--we dont want to display the defauld upload button -->
+<style>
+
+div#div_id_image div{
+  display:none;
+}
+
+div#prof label {
+    font-weight: 800
+    display: block;
+    line-height: 2.2em;
+    padding: 0 0.62em;
+    border: 1px solid #6a9daf;
+    border-radius: 0.25em;
+    font-family: arial, sans-serif;
+    font-size: 0.8em;
+}
+
+.dummy-width{
+  width:92vw;
+}
+
+
+</style>
+</head>
+
+<body>          
+         
+          <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+             <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+                <div action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
+                    <div class="d-flex p-2 px-3 bg-white border-top  my-auto">
+                        <ul class="nav">
+
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'index' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Blog</a>
+                        </li>
+
+
+
+                      </ul>
+                  </div>
+                  
+              </div>
+            </nav>  
+
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0 d-none">
+                <span class="text-uppercase page-subtitle">Edit Profile</span>
+                <h3 class="page-title">User Profile</h3>
+              </div>
+              <div class="input-group input-group-seamless ml-3">
+
+            </div>
+
+            <!-- End Page Header -->
+            <!-- Default Light Table -->
+            <div class="row">
+              
+                <div class="col-lg-4" style="min-width:30vw">
+                  <form  method="POST" enctype="multipart/form-data">
+                   <div class="form-row">
+                  {% csrf_token %}
+                    <div class="card card-small mb-4 pt-3">
+                      <div class="card-header border-bottom text-center">
+                        <div class="mb-3 mx-auto">
+                        <img class="rounded-circle" src="{{ user.profile.image.url }}" alt="User Avatar" width="110"> </div>
+                        <h4 class="mb-0">{{user.profile.title}} {{user.first_name}},{{user.last_name}}</h4>
+                          
+                        <div id="prof" class="mb-2     btn-outline-primary mr-2">
+                         <i class="material-icons mr-1">person_add</i></button>
+                          {{p_form.image|as_crispy_field}}
+                         </div>    
+
+                         <div class="form-row"> 
+                            <div class="form-group col-md-12">
+                                {{p_form.job_title|as_crispy_field}}
+                            </div>
+                          </div>
+
+                       
+                      </div>
+     
+                      <ul class="list-group list-group-flush">
+                      <li class="list-group-item px-4">
+                        <div class="form-row"> 
+                            <div class="form-group col-md-6">
+                                {{ p_form.media }}
+                                {{p_form.birth_date|as_crispy_field}} 
+                            </div>
+                            <div class="form-group col-md-6">
+                             
+                                {{p_form.user_type|as_crispy_field}} 
+                            </div>
+                        </div>
+                       </li> 
+                      </ul>
+                     
+
+                      
+
+                    </div>
+                   
+                  </div>
+                  
+                 
+
+                </div> <!--end of first div-->
+   
+
+              <div class="col-lg-8">
+                <div class="card card-small mb-4">
+                  <div class="card-header border-bottom ">
+                    <h6 class="m-0">Edit Profile</h6>
+                  </div>
+                  <div>
+                                        
+
+                        
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item p-3">
+                      <div class="row">
+                        <div class="col">
+                          <div id="f1">
+
+                          <div class="form-row">
+                            <div class="form-group col-md-2">
+                               {{p_form.title|as_crispy_field}} 
+                            </div>
+                            <div class="form-group col-md-5">
+                               {{u_form.first_name|as_crispy_field}} 
+                            </div>
+                            <div class="form-group col-md-5">
+                               {{u_form.last_name|as_crispy_field}} 
+                            </div>
+                          </div>
+
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                               {{u_form.email|as_crispy_field}} 
+                            </div>
+                            <div class="form-group col-md-4">
+                               {{p_form.other_names|as_crispy_field}} 
+                            </div>
+                            <div class="form-group col-md-4">
+                               {{p_form.nick_name|as_crispy_field}} 
+                            </div>
+                          </div>
+
+                            <div class="form-row">
+                              <div class="form-group col-md-4">
+                              {{p_form.phone1|as_crispy_field}} 
+                              </div>
+                              <div class="form-group col-md-4">
+                              {{p_form.phone2|as_crispy_field}} 
+                              </div>
+                              <div class="form-group col-md-4">
+                              {{p_form.email2|as_crispy_field}} 
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-4">
+                              {{p_form.location|as_crispy_field}} 
+                              </div>
+                              <div class="form-group col-md-4">
+                              {{p_form.timezone|as_crispy_field}} 
+                              </div>
+                              <div class="form-group col-md-4">
+                              {{p_form.zip_post_code|as_crispy_field}} 
+                              </div>
+                            </div>
+
+                          
+                           <div class="form-row" >
+                              <div class="form-group col-md-12">
+                                {{p_form.summary|as_crispy_field}}
+                              </div>
+                           </div>
+
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                {{p_form.skills_have|as_crispy_field}} 
+                              </div>    
+                              <div class="form-group col-md-6">
+                                {{p_form.skills_like2_have|as_crispy_field}} 
+                               </div>
+                            </div>
+
+
+ 
+                            <button type="submit" class="btn btn-accent">Update Account</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </form>
+            </div>
+            <!-- End Default Light Table -->
+          </div>
+
+
+
+</body>
+{% endblock content %}          
+
+<!--summary-->
+<!--job title, current location, post-code, timezone, phones-->
+<!--nick name other names--> 
+<!--skills i have--> 
+<!--skills i want to have--> 
+<!--Address, --> 
+
+
