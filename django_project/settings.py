@@ -29,7 +29,7 @@ SECRET_KEY = '2#h0+$o_525ii106&-abpnx=cz8h3x7f_20*b2#o-ms^a=!w5@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost',"gofru.azurewebsites.net"]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
